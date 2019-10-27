@@ -29,7 +29,7 @@ class Welcome extends CI_Controller
         $firstName = $this->input->post("firstname");
         $lastName = $this->input->post("lastname");
         $email = $this->input->post("email");
-        $username = $this->input->post("username");
+        $username = $this->input->post("new_username");
         $password = password_hash($this->input->post("new_password"), PASSWORD_BCRYPT);
         $genres = $this->input->post("music_genres");
         $image_url = "";

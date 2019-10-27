@@ -43,7 +43,7 @@
                                         <input type="text" placeholder="Email Adress" name="email" id="email" onchange="" />
                                     </div>
                                     <div class="username_input">
-                                        <input type="text" placeholder="Username" name="username" id="username" onchange="" />
+                                        <input type="text" placeholder="Username" name="new_username" id="new_username" onchange="" />
                                     </div>
                                     <div class="password_input">
                                         <input type="password" placeholder="Password" name="new_password" id="new_password" />
