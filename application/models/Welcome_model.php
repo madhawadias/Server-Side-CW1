@@ -65,4 +65,22 @@ class Welcome_model extends CI_Model
         }
         return $user;
     }
+
+    public function getUserAccount($username){
+        $user = null;
+        $this->db->where('username',$username);
+        $result = $this->db->get('user_profile');
+        foreach($result->result() as $row){
+            $user = new UserProfile(
+                $row->user_id,
+                $row->first_name,
+                $row->last_name,
+                $row->email,
+                $row->username,
+                $row->password,
+                $row->image_url
+            );
+        }
+         return $user;
+    }
 }

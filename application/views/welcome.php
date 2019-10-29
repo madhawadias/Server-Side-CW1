@@ -2,7 +2,7 @@
 <html>
 
 <head>
-    <title>MusicNet</title>
+    <title>Music Net</title>
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
     <link href="<?php echo base_url(); ?>resources/css/style.css" rel="stylesheet" type="text/css" />
 </head>
@@ -15,7 +15,7 @@
                     <h1><a href="#"><span>Music</span>Net<small>Connect through music</small></a></h1>
                 </div>
                 <div class="login">
-                    <form method="post" id="search" action="/socialnet/index.php/welcome/login">
+                    <form method="post" id="search" action="<?php echo base_url(); ?>index.php/welcome/login">
 
                         <input type="text" placeholder="Username" name="username" id="username" autocomplete="off" />
                         <input type="password" placeholder="Password" name="password" id="password" autocomplete="off" />
@@ -34,7 +34,7 @@
                             <h2><span>Create an account </span></h2>
                             <span class="description"> It's quick and easy </span>
                             <div class="register_container">
-                                <form method="post" action="/socialnet/index.php/welcome/register">
+                                <form method="post" action="<?php echo base_url(); ?>index.php/welcome/register">
                                     <div class="name_input">
                                         <input type="text" placeholder="First Name" name="firstname" id="firstname" />
                                         <input type="text" placeholder="Last Name" name="lastname" id="lastname" />
@@ -54,7 +54,7 @@
                                             <?php
                                             if (count($genres) > 0) {
                                                 foreach ($genres as $g) {
-                                                    echo "<option value=".$g->getGenreId().">" . $g->getGenreName() . "</option>";
+                                                    echo "<option value=" . $g->getGenreId() . ">" . $g->getGenreName() . "</option>";
                                                 }
                                             }
                                             ?>
@@ -67,9 +67,37 @@
                             </div>
                         </div>
                     </div>
+                    <div class="clr">
+                    </div>
                 </div>
             </div>
         </div>
+
+        <!--footer-->
+        <div class="fbg">
+            <div class="fbg_resize">
+                <div class="col c1">
+                    <h2><span> Multiple Genres </span></h2>
+                    <a href="#"><img src="<?php echo base_url(); ?>resources/images/footer_img_1.jpg" width="58" height="58" alt="" /></a> 
+                    <a href="#"><img src="<?php echo base_url(); ?>resources/images/footer_img_2.jpg" width="58" height="58" alt="" /></a>
+                    <a href="#"><img src="<?php echo base_url(); ?>resources/images/footer_img_3.jpg" width="58" height="58" alt="" /></a>
+                    <a href="#"><img src="<?php echo base_url(); ?>resources/images/footer_img_4.jpg" width="58" height="58" alt="" /></a>
+                    <a href="#"><img src="<?php echo base_url(); ?>resources/images/footer_img_5.jpg" width="58" height="58" alt="" /></a>
+                    <a href="#"><img src="<?php echo base_url(); ?>resources/images/footer_img_6.jpg" width="58" height="58" alt="" /></a>
+                </div>
+                <div class="col c2">
+                    <h2><span>Lorem Ipsum</span></h2>
+                    <p>Lorem ipsum dolor<br />
+                        Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Donec libero. Suspendisse bibendum. Cras id urna. <a href="#">Morbi tincidunt, orci ac convallis aliquam</a>, lectus turpis varius lorem, eu posuere nunc justo tempus leo. Donec mattis, purus nec placerat bibendum, dui pede condimentum odio, ac blandit ante orci ut diam.</p>
+                </div>
+                <div class="col c3">
+                    <h2><span>About</span></h2>
+                    <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Donec libero. Suspendisse bibendum. Cras id urna. Morbi tincidunt, orci ac convallis aliquam, lectus turpis varius lorem, eu posuere nunc justo tempus leo. llorem, eu posuere nunc justo tempus leo. Donec mattis, purus nec placerat bibendum. <a href="#">Learn more...</a></p>
+                </div>
+                <div class="clr"></div>
+            </div>
+        </div>
+
     </div>
 </body>
 
