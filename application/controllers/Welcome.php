@@ -30,7 +30,7 @@ class Welcome extends CI_Controller
             array_push($errors, 'Username is required');
         }
         if (empty($password)) {
-            array_push($password, 'Password is required');
+            array_push($errors, 'Password is required');
         }
 
         if (count($errors) == 0) { 

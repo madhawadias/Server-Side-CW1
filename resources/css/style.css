@@ -69,7 +69,7 @@ a.rm, a.com {
 	padding:0;
 	text-decoration:none;
 }
-.header, .content, .menu_nav, .fbg, .footer, form, ol, ol li, ul, .content .mainbar, .content .sidebar {
+.header, .content, .menu_nav, .fbg, .footer, form, ol, ol li, ul, .content .mainbar, .content .sidebar, .content .userlist_sidebar {
 	margin:0;
 	padding:0;
 }
@@ -162,6 +162,12 @@ a.rm, a.com {
 	float:left;
 	width:285px;
 }
+.userlist_sidebar{
+	padding:0;
+	float:left;
+	width:100%;
+}
+
 .sidebar .gadget {
 	margin:0;
 	padding:10px 15px 10px 0;
@@ -183,6 +189,30 @@ a.rm, a.com {
 	margin:0;
 	color:#595959;
 }
+
+.userlist_sidebar .gadget {
+	margin:0;
+	padding:10px 15px 10px 0;
+}
+.userlist_sidebar .gadget .testi {
+	padding:0 0 0 0;
+}
+.userlist_sidebar .gadget .title {
+	text-align:right;
+}
+.userlist_sidebar .gadget span.q {
+	text-align:right;
+	font:normal 60px/12px Arial, Helvetica, sans-serif;
+	color:#d9d9d9;
+}
+.userlist_sidebar h2{
+	text-align: center;
+	font:normal 20px Arial, Helvetica, sans-serif;
+	padding:8px 0;
+	margin:0;
+	color:#595959;
+}
+
 ul.sb_menu, ul.ex_menu {
 	margin:0;
 	padding:0;

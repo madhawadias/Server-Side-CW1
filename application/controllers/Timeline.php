@@ -18,8 +18,21 @@ class Timeline extends CI_Controller{
         $values=array(
             'username'=>$user_name
         );
- 
+        $this->load->view('header');
         $this->load->view('timeline',$values);
+        $this->load->view('footer');
+    }
+
+    public function search_users(){
+          $errors=array();
+          $genre=$this->input->post('genre_name_input');
+          if(empty($genre)){
+            array_push($errors,"Genre is empty");
+          }
+          if(count($errors)==0){
+            $this->session->set_userdata('selected_genre', $genre);     
+            redirect('/searchresults/userlist');
+          }          
     }
 
     public function create_post(){
