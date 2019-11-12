@@ -12,7 +12,6 @@ class Welcome extends CI_Controller
 
     public function index()
     {
-        //$this->load->helper('url');
         $genres = $this->welcome_model->get_genres();
         $values = array(
             'genres' => $genres

@@ -1,5 +1,6 @@
 <?php
-class UserProfile{
+class UserProfile
+{
     private $user_id;
     private $first_name;
     private $last_name;
@@ -8,21 +9,69 @@ class UserProfile{
     private $password;
     private $image_url;
 
-    function __construct($user_id,$first_name,$last_name,$email,$username,$password,$image_url) {
+    function __construct($user_id, $first_name, $last_name, $email, $username, $password, $image_url)
+    {
         $this->user_id = $user_id;
         $this->first_name = $first_name;
-        $this->last_name=$last_name;
-        $this->email=$email;
-        $this->username=$username;
-        $this->password=$password;
-        $this->image_url=$image_url;
+        $this->last_name = $last_name;
+        $this->email = $email;
+        $this->username = $username;
+        $this->password = $password;
+        $this->image_url = $image_url;
     }
 
-    function getUserId() { return $this->user_id; }
-    function getFirstName() { return $this->first_name; }
-    function getLastName() { return $this->last_name; }
-    function getEmail() { return $this->email; }
-    function getUsername() { return $this->username; }
-    function getPassword() { return $this->password; }
-    function getImageUrl() { return $this->image_url; }     
+    function getUserId()
+    {
+        return $this->user_id;
+    }
+    function getFirstName()
+    {
+        return $this->first_name;
+    }
+    function getLastName()
+    {
+        return $this->last_name;
+    }
+    function getEmail()
+    {
+        return $this->email;
+    }
+    function getUsername()
+    {
+        return $this->username;
+    }
+    function getPassword()
+    {
+        return $this->password;
+    }
+    function getImageUrl()
+    {
+        return $this->image_url;
+    }
+}
+
+
+class UserListGenre extends UserProfile
+{
+    private $follow_status;
+
+    function __construct(   $user_id,  $first_name,  $last_name,  $email,  $username,  $password,
+        $image_url,
+        $follow_status) {
+
+        parent::__construct($user_id,
+        $first_name,
+        $last_name,
+        $email,
+        $username,
+        $password,
+        $image_url);
+
+        $this->follow_status = $follow_status;
+    }
+
+    function getFollowStatus()
+    {
+        return $this->follow_status;
+    }
 }

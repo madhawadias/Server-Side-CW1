@@ -11,7 +11,8 @@ class SearchResults extends CI_Controller{
 
     public function userlist(){
         $genre=$this->session->selected_genre;
-        $users_list=$this->userlist_model->get_user_list($genre);
+        $user_id=$this->session->logged_in['user_id'];
+        $users_list=$this->userlist_model->get_user_list($genre,$user_id);
         $data=array(
             'users_list'=>$users_list
         );
@@ -19,6 +20,9 @@ class SearchResults extends CI_Controller{
          $this->load->view('searchresults',$data);
          $this->load->view('footer');
 
-        
+           }
+
+    public function follow_user($user_id){
+             
     }
 }

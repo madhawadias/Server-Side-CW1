@@ -16,11 +16,11 @@
                 </div>
                 <div class="menu_nav">
                     <ul>
-                        <li class="active"><a href="index.html">Home</a></li>
-                        <li><a href="support.html">Friends</a></li>
-                        <li><a href="about.html">Followers</a></li>
-                        <li><a href="blog.html">Following</a></li>
-                        <li><a href="contact.html"> Settings </a></li>
+                        <li class="active"><a href="<?php echo site_url('timeline') ?>">Home</a></li>
+                        <li><a href="<?php echo site_url('follow/friends') ?>">Friends</a></li>
+                        <li><a href="<?php echo site_url('follow/followers') ?>">Followers</a></li>
+                        <li><a href="<?php echo site_url('follow/following') ?>">Following</a></li>
+                        <li><a href="<?php echo site_url('controller/function/uri') ?>"> Settings </a></li>
                     </ul>
                     <div class="clr"></div>
                 </div>

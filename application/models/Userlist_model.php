@@ -5,7 +5,7 @@ include_once 'UserProfile.php';
 class Userlist_model extends CI_Model
 {
 
-    public function get_user_list($genre)
+    public function get_user_list($genre,$user_id)
     {
         $genre_id = null;
         $user_profile_list = null;
@@ -28,15 +28,18 @@ class Userlist_model extends CI_Model
             $profiles = $this->db->get();
             if ($profiles->num_rows()) {
                 foreach ($profiles->result() as $row) {
-                    $user_profile_list[] = new UserProfile(
-                        $row->user_id,
-                        $row->first_name,
-                        $row->last_name,
-                        $row->email,
-                        $row->username,
-                        $row->password,
-                        $row->image_url
-                    );
+                    if($user_id != $row->user_id){
+                        $user_profile_list[] = new UserListGenre(
+                            $row->user_id,
+                            $row->first_name,
+                            $row->last_name,
+                            $row->email,
+                            $row->username,
+                            $row->password,
+                            $row->image_url,
+                            true
+                        );
+                    }               
                 }
             } else {
                 array_push($errors, 'There is no users');
@@ -47,5 +50,21 @@ class Userlist_model extends CI_Model
             return $errors;
         }
         return $user_profile_list;
+    }
+
+   public function checkFollowStatus($user_id,$follower_id){
+        
+   } 
+
+    public function getFollowers($user_id){
+        $followers_list = null; 
+    }
+
+    public function getFollowing($user_id){
+        $following_list = null; 
+    }
+
+    public function getFriends($user_id){
+        $friends_list = null; 
     }
 }
