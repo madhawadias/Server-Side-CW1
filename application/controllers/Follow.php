@@ -5,7 +5,6 @@ class Follow extends CI_Controller
     function __construct()
     {
         parent::__construct();
-        $this->load->helper('url');
         $this->load->model('USerlist_model', 'userlist_model');
     }
     

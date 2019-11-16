@@ -25,5 +25,6 @@
                     </ul>
                 </div>
             </div>
+            <div class="clr"></div>
         </div>
     </div>

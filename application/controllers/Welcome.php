@@ -6,7 +6,6 @@ class Welcome extends CI_Controller
     function __construct()
     {
         parent::__construct();
-        $this->load->helper('url');
         $this->load->model('Welcome_model', 'welcome_model');
     }
 
@@ -81,16 +80,22 @@ class Welcome extends CI_Controller
         }
 
         if (count($errors) == 0) {
-            $this->welcome_model->saveUser(
-                $user_id,
-                $firstName,
-                $lastName,
-                $email,
-                $username,
-                $password,
-                $image_url,
-                $genres
+            // $this->welcome_model->saveUser(
+            //     $user_id,
+            //     $firstName,
+            //     $lastName,
+            //     $email,
+            //     $username,
+            //     $password,
+            //     $image_url,
+            //     $genres
+            // );
+            $data=array(
+                'user_id'=>$user_id,
+                'first_name'=>$firstName
             );
+
+            $this->load->view('imageupload',$data);
         } else {
             echo 'There are errors';
         }

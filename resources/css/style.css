@@ -126,6 +126,8 @@ a.rm, a.com {
 	float:right;
 	width:638px;
 }
+
+
 .mainbar img {
 	padding:4px;
 	border:1px solid #f2f2f1;
@@ -243,6 +245,12 @@ ul.sb_menu li a:hover, ul.ex_menu li a:hover, ul.sb_menu li.active a, ul.ex_menu
 ul.sb_menu li a:hover {
 	text-decoration:none;
 }
+
+ul.sb_menu li a img.genre_result_image{
+	height: auto;
+	width: 9%;	
+}
+
 ul.ex_menu li a:hover {
 	text-decoration:none;
 }
@@ -258,7 +266,7 @@ ul.ex_menu li a:hover {
 }
 .fbg {
 	padding:10px 0;
-	background:url(../images//fbg_bg.jpg) repeat-y center;
+	background:url(../images/fbg_bg.jpg) repeat-y center;
 }
 .fbg_resize {
 	margin:0 auto;
@@ -308,7 +316,7 @@ ul.ex_menu li a:hover {
 	color:#fbfbfb;
 }
 .footer {
-	background:url(images/main_bg.jpg) repeat-y center;
+	background:url(../images/main_bg.jpg) repeat-y center;
 }
 .footer_resize {
 	margin:0 auto;
@@ -479,3 +487,53 @@ ol li .send {
 	margin:0;
 	color:#595959;
 }
+ 
+.image_upload {
+	text-align: center;
+	margin:0 auto;
+	padding:0;
+	width:638px;
+}
+
+.image_upload .article img {
+	padding:4px;
+	border:1px solid #f2f2f1;
+	background:#FFF;
+	height: auto;
+	width: 30%;
+}
+.image_upload img.fl {
+	margin:4px 16px 4px 0;
+	float:left;
+}
+.image_upload .article {
+	margin:0;
+	padding:10px 0 5px 15px;
+}
+.image_upload .article a {
+	color:#78bbe6;
+}
+
+.image_upload .post-data a {
+	color:#595959;
+}
+.image_upload .spec a {
+	padding:5px 15px;
+	background:#78bbe6;
+	color:#FFF;
+}
+
+.content .image_upload .comment {
+	margin:0;
+	padding:16px 0 0 0;
+}
+.content .image_upload .comment img.userpic {
+	border:1px solid #dedede;
+	margin:10px 16px 0 0;
+	padding:0;
+	float:left;
+}
+
+
+
+

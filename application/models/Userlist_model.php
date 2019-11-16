@@ -9,7 +9,7 @@ class Userlist_model extends CI_Model
     {
         $genre_id = null;
         $user_profile_list = null;
-        $errors = array();
+        //$errors = array();
         $this->db->select('genre_id');
         $this->db->from('genre');
         $this->db->like('genre_name', $genre);
@@ -42,12 +42,12 @@ class Userlist_model extends CI_Model
                     }               
                 }
             } else {
-                array_push($errors, 'There is no users');
-                return $errors;
+               // array_push($errors, 'There are no users');
+                return "There are no users";
             }
         } else {
-            array_push($errors, 'There is no such genre available');
-            return $errors;
+           // array_push($errors, 'There is no such genre available');
+            return "There is no such genre available";
         }
         return $user_profile_list;
     }

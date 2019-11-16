@@ -67,6 +67,9 @@
                             </div>
                         </div>
                     </div>
+                    <div class="sidebar">
+
+                    </div>
                     <div class="clr">
                     </div>
                 </div>
@@ -78,7 +81,7 @@
             <div class="fbg_resize">
                 <div class="col c1">
                     <h2><span> Multiple Genres </span></h2>
-                    <a href="#"><img src="<?php echo base_url(); ?>resources/images/footer_img_1.jpg" width="58" height="58" alt="" /></a> 
+                    <a href="#"><img src="<?php echo base_url(); ?>resources/images/footer_img_1.jpg" width="58" height="58" alt="" /></a>
                     <a href="#"><img src="<?php echo base_url(); ?>resources/images/footer_img_2.jpg" width="58" height="58" alt="" /></a>
                     <a href="#"><img src="<?php echo base_url(); ?>resources/images/footer_img_3.jpg" width="58" height="58" alt="" /></a>
                     <a href="#"><img src="<?php echo base_url(); ?>resources/images/footer_img_4.jpg" width="58" height="58" alt="" /></a>
@@ -99,6 +102,15 @@
         </div>
 
     </div>
+    <div class="footer">
+        <div class="footer_resize">
+            <p class="lf">&copy; Copyright <a href="#">Informatics Institue of Technology</a>.</p>
+            <p class="rf"> By <a href="#">Sithum Pathirana</a></p>
+            <div class="clr"></div>
+        </div>
+    </div>
+    <div align=center> This content belongs to <a href='http://iit.ac.lk'> Informatics Institue of Technology </a> 57, Ramakrishna Road, Colombo 06,
+        Sri Lanka. </div>
 </body>
 
 </html>
